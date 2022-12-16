@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{311250FC-110E-4746-852B-529A6A6F9A93}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ProjetoCemiterio</RootNamespace>
+    <AssemblyName>ProjetoCemeterio</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.4.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="classesBasicas\Cliente.cs" />
+    <Compile Include="classesBasicas\Falecido.cs" />
+    <Compile Include="classesBasicas\Funcionario.cs" />
+    <Compile Include="classesBasicas\Funeral.cs" />
+    <Compile Include="classesBasicas\Localizacao.cs" />
+    <Compile Include="classesBasicas\Pessoa.cs" />
+    <Compile Include="classesBasicas\Produto.cs" />
+    <Compile Include="classesBasicas\Servico.cs" />
+    <Compile Include="GUI\FormCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormCliente.Designer.cs">
+      <DependentUpon>FormCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FormFalecido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormFalecido.Designer.cs">
+      <DependentUpon>FormFalecido.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FormFuncionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormFuncionario.Designer.cs">
+      <DependentUpon>FormFuncionario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FormFuneral.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormFuneral.Designer.cs">
+      <DependentUpon>FormFuneral.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FormCemiterio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormCemiterio.Designer.cs">
+      <DependentUpon>FormCemiterio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FormProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormProduto.Designer.cs">
+      <DependentUpon>FormProduto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FormServico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormServico.Designer.cs">
+      <DependentUpon>FormServico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="persistencia\ClienteBD.cs" />
+    <Compile Include="persistencia\FalecidoBD.cs" />
+    <Compile Include="persistencia\FuncionarioBD.cs" />
+    <Compile Include="persistencia\FuneralBD.cs" />
+    <Compile Include="persistencia\LocalizacaoBD.cs" />
+    <Compile Include="persistencia\ProdutoBD.cs" />
+    <Compile Include="persistencia\ServicoBD.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUI\FormCliente.resx">
+      <DependentUpon>FormCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormFalecido.resx">
+      <DependentUpon>FormFalecido.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormFuncionario.resx">
+      <DependentUpon>FormFuncionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormFuneral.resx">
+      <DependentUpon>FormFuneral.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormCemiterio.resx">
+      <DependentUpon>FormCemiterio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormServico.resx">
+      <DependentUpon>FormServico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button-Refresh-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Remove-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Folder-Group-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Folder-Group-icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Folder-Group-icon %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Group-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Death-Note-icon.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
